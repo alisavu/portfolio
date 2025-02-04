@@ -20,20 +20,54 @@
     <hr>
     <div>
         <img src="https://www.freepnglogos.com/uploads/email-logo-png-13.png" height="100" width="100">
-        <h2>Email</h2>
+        <h3>Email</h3>
         <p>alisahvu@gmail.com</p>
     </div>
     <div>
         <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" height="100" width="100">
-        <h2>LinkedIn</h2>
+        <h3>LinkedIn</h3>
         <p><a href="https://www.linkedin.com/in/alisa-vu-9a6a00244">www.linkedin.com/in/alisa-vu-9a6a00244</a></p>
     </div>
     <div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" width="100" height="100">
-        <h2>GitHub</h2>
+        <h3>GitHub</h3>
         <p><a href="https://github.com/alisavu">alisavu</a></p>
     </div>
     
+    <h2>Message Me!</h2>
+    <form action="" method="get" class="message-form">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <div class="message-form">
+            <label for="name">Enter your name: </label>
+            <input type="text" name="name" id="name" required />
+            </div>
+        <div class="message-form">
+            <label for="contact">Preferred contact method:</label>
+            <select id="contact">
+                <optgroup label="Phone">
+                    <option>Text</option>
+                    <option>Call</option>
+                </optgroup>
+                <option value="email">Email</option>
+                <option value="linkedin">LinkedIn</option>
+            </select>
+        </div>
+        <div class="message-form">
+            <label for="contact">Enter email/phone number/LinkedIn: </label>
+            <input type="text" name="contact" id="contact" required />
+        </div>
+        </fieldset>
+        <br>
+        
+        <div class="message-form">
+            <label for="message">Enter your message:</label><br>
+            <textarea id="message" rows="15" cols="70" required></textarea>
+        </div>
+        <div class="message-form">
+          <input type="submit" value="Submit!" />
+        </div>
+      </form>
     
 </body>
 </html>

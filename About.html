@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
     <style>
+        .pinkText {color: #E8ABCF;}
         table {
             border-collapse: collapse;
             border: 2px solid rgb(140 140 140);
@@ -25,20 +26,32 @@
 <body>
     <h1>About Me!</h1>
     <h3><a href="home.html">Home</a></h3>
-    <h3>About Me</h3>
+    <h3><span class="pinkText">About Me</span></h3>
     <h3><a href="Projects.html">Projects</a></h3>
     <h3><a href="Contact.html">Contact Me</a></h3>
     <hr>
-    <img src="alisa2.heic" height="500" width="500">
-    <section>
+    <picture>
+        <source srcset="alisa2.heic" height="500" width="500">
+        <img src="alisa.jpg" height="500" width="500">
+    </picture>
+    
+    <div>
         <p>
-            Hi! My name is Alisa Vu and I am currently a fouth year undergraduate student at UCSD, and am expecting
-            to graduate by Spring 2025. Over the course of my undergrad, I have taken a variety of classes revolving 
-            around biology, chemistry, computer science, data sciences, and UI/UXdesign. I have recently been driving
-            more into design, as it sparks my creativity and problem-solving skills. I am eager to continue to find 
-            more opportunities that will allow me to explore any data analysis or design fields! &#9786;
+            Hi! My name is Alisa Vu and I am currently a fouth year undergraduate student at <abbr>UCSD</abbr> (University
+            of California, San Diego), and am expecting to graduate by Spring 2025. Over the course of my undergrad, I have
+            taken a variety of classes revolving around biology, chemistry, computer science, data sciences, and UI/UXdesign.
+            I have recently been driving more into design, as it sparks my creativity and problem-solving skills. 
+            <aside>
+                I am always eager to continue to find more opportunities that will allow me to explore and develop 
+                my skills in any data analysis or design related fields! &#9786;
+            </aside>
         </p>
-    </section>
+        <p>
+            Out of school, I enjoy trying new cafes, as I am a huge matcha and coffee enthusiast. I also like staying
+            active by strength training and running &ndash; one of my goals by the end of the year is to complete a marathon.
+            In addition, I like hanging out with my friends and going to concerts. I am always open to trying new activities!
+        </p>
+    </div>
     <table>
         <caption>
             <h1><strong>Work Experience</strong></h1>
@@ -60,7 +73,7 @@
             </td>
             <td>
                 <ul>
-                    <li>Taught first-time coders how to develop games in Roblox Studio using Luau, making coding engaging and accessible</li>
+                    <li>Taught first-time coders how to develop games in Roblox Studio using <dfn>Luau</dfn> (Roblox's scripting language), making coding engaging and accessible</li>
                     <li>Designed and delivered interactive lessons, simplifying complex programming concepts into fun, hands-on projects.</li>
                     <li>Helped the company gain over $1,500 in memberships by driving engagement through social media marketing initiatives and tabling at schools</li>
                 </ul>
@@ -111,17 +124,40 @@
         </tr>
     </table>
     <button type="button">Download Resume</button>
-    <!--add resume downloadable pdf-->
+    <noscript>
+        <a href="resume.pdf">Downloadable Resume</a>
+        <!--add resume downloadable pdf-->
+    </noscript>
     <h2>Education</h2>
     <dl>
         <dt>University of California, San Diego</dt>
         <dd>B.S. in Computer Science</dd>
         <dd>Graduating Spring 2025</dd>
-
-        <dt>Relevant Courses</dt>
-        <dd>Basic Data Structures and Object-Oriented Design, Discrete Mathematics, Systems Programming, Advanced Data Structures, Design and Analysis
-            of Algorithms, Data Science in Practice</dd>
+        <details>
+            <summary><b>Relevant Courses</b></summary>
+            Basic Data Structures and Object-Oriented Design, Discrete Mathematics, Systems Programming, Advanced Data Structures, Design and Analysis
+            of Algorithms, Data Science in Practice
+        </details>
+        <br>
+        <dt>Mira Mesa High School</dt>
+        <dd>High School Diploma</dd>
+        <dd>Aug 2017 - Jun 2021</dd>
     </dl>
+    <h2>Skills</h2>
+    <form action="/search-skills" method="GET">
+        <label for="skill-search">Search for a skill:</label>
+        <input type="search" id="skill-search" name="skill" placeholder="Type a skill...">
+        <button type="submit">Search</button>
+    </form>
+    
+    <h3>Top Technical Skills</h3>
+    <ol>
+        <li>Python</li>
+        <li><ins>HTML/CSS/JS</ins></li>
+        <li>Excel</li>
+        <li>Java</li>
+        <li><del>R</del></li>
+    </ol>
 
 </body>
 </html>

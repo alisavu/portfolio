@@ -26,17 +26,44 @@
     </header>
     <hr>
     <main>
-        <h1>Hey there! I'm <span class="pinkText">Alisa Vu</span></h1>
-        <h3>B.S. Computer Science: Bioinformatics</h3>
-        <p>
-            I am a fourth year undergraduate student at UCSD. I am passionate about solving real-world problems with <b>software development</b> and <b>data-driven</b> insights. 
-            I have hands-on experience in <b>Python, Java, and HTML/CSS/Javascript</b> through coursework, projects, and internships.
+        <hgroup>
+            <h1>Hey there! I'm <span class="pinkText">Alisa Vu</span></h1>
+            <h3>B.S. <em>Computer Science: Bioinformatics</em></h3>
+        </hgroup>
+        <pre>
+            /\_/\
+           ( o.o )   <code>print("Welcome to my Portfolio!")</code>
+           > ^_^ <
+        </pre>
+        <fieldset>
+            <p>
+                I am a fourth year undergraduate student at UCSD. I am passionate about solving real-world problems with <b>software development</b> and <b>data-driven</b> insights. 
+                I have hands-on experience in <b>Python, Java, and HTML/CSS/Javascript</b> through coursework, projects, and internships.
+            </p>
+            <p>
+                I thrive in environments where I can apply <b>data analysis, software engineering, and problem-solving</b> to create impactful solutions.
+                Whether it is building scalable applications or uncovering patterns in data, I love turning ideas into reality.
         </p>
-        <p>
-            I thrive in environments where I can apply <b>data analysis, software engineering, and problem-solving</b> to create impactful solutions.
-            Whether it is building scalable applications or uncovering patterns in data, I love turning ideas into reality.
-        </p>
+    </fieldset>  
     </main> 
+    <figure>
+        <figcaption>
+            <kbd>Press</kbd> for a cute video &hearts;
+        </figcaption>
+        <video id="video" controls>
+            <source src="kuromi.mp4">
+            <audio id="audio" controls src="lofi.mp3"></audio>
+        </video>
+        <script>
+            const video = document.getElementById("video");
+            const audio = document.getElementById("audio");
+        
+            video.onplay = () => audio.play();  // Play audio when video starts
+            video.onpause = () => audio.pause(); // Pause audio when video pauses
+            video.onseeked = () => audio.currentTime = video.currentTime; // Sync times
+            video.onended = () => audio.pause();  // Stop audio when video ends
+        </script>
+    </figure>
     <div>
         <blockquote cite="https://www.goodreads.com/quotes/279582-i-can-t-change-the-direction-of-the-wind-but-i">
             <p><i>I can&#39;t change the direction of the wind, but I can adjust my sails to always reach my destination.
@@ -44,9 +71,63 @@
             </p>
         </blockquote>
     </div>
+    <h3>Fun Questions!</h3>
+    <div>
+        <label for="fav-lang">Choose your favorite programming language:</label>
+        <input list="languages" id="fav-lang" name="fav-lang" placeholder="Type a language">
+        <datalist id="languages">
+            <option value="Python"></option>
+            <option value="JavaScript"></option>
+            <option value="HTML"></option>
+            <option value="C"></option>
+            <option value="C++"></option>
+            <option value="C#"></option>
+            <option value="CSS"></option>
+            <option value="Java"></option>
+            <option value="Ruby"></option>
+            <option value="Rust"></option>
+            <option value="R"></option>
+            <option value="Swift"></option>
+        </datalist>
+    </div>
+    <canvas width="300" height="300"></canvas>
+    <!-- Custom element usage -->
+    <hello-world></hello-world>
+
+    <script>
+        // Define a new custom element called <hello-world>
+        class HelloWorld extends HTMLElement {
+            // Lifecycle method when the element is added to the DOM
+            connectedCallback() {
+                console.log("Hello world!");
+            }
+        }
+
+        // Register the custom element with the browser
+        customElements.define('hello-world', HelloWorld);
+    </script>
     <footer>
-        <button type="button">Message Me!</button>
-        <!--Add page that has textboxes, when submitted, send that message to my email-->
+        <svg height="130" width="500">
+            <defs>
+              <linearGradient id="grad1">
+                <stop offset="0%" stop-color="purple" />
+                <stop offset="100%" stop-color="pink" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+            <text fill="#ffffff" font-size="45" font-family="Verdana" x="70" y="86">AV</text>
+          </svg>
+          <button onclick="document.getElementById('myDialog').showModal()">Thanks for visiting!</button>
+        <dialog id="myDialog">
+            <h2>Welcome to My Portfolio!</h2>
+            <p>Thanks for visiting. Let me know if you have any questions!</p>
+            <address>
+                Contact me at: <br>
+                <a href="alisahvu@gmail.com">alisahvu@gmail.com</a><br />
+                <a href="tel:+18582260054">+1 (858)226&dash;0054</a>
+            </address>
+            <button onclick="document.getElementById('myDialog').close()">Close</button>
+        </dialog>
     </footer>
 </body>
 </html>
